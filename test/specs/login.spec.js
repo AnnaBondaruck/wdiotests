@@ -11,8 +11,8 @@ describe('Auto', () => {
     });
 
     it('user logs in with valid data', () => {
-        LoginPage.setLogin('lepek42435@asfalio.com');
-        LoginPage.setPassword('SophiaB2019');
+        LoginPage.setLogin(process.env.LOGIN);
+        LoginPage.setPassword(process.env.PASSWORD);
         LoginPage.clickSubmitButton();
         ProfilePage.isOpen();
     });
